@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SanchezSv</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="IMG/SAnchezsv (1).png" type="image/x-icon">
+ <!-- Tus otras etiquetas meta y enlaces CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+ 
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+          <!-- <img src="IMG/SAnchezsv (1).png" alt="Logo de SanchezSv">  --> 
+            <h2 class="nombreCanal">SanchezSv</h2>
+        </div>
+        <nav>
+            <a href="#hero" class="nav-link">Inicio</a>
+            <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
+            <a href="#Portafolio" class="nav-link">Portafolio</a>
+            <a href="#Blog" class="nav-link">Blog</a>
+            <a href="#Contacto" class="nav-link">Contacto</a>
+            <button class="menu-toggle">☰</button>
+
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>HOLA</h1>
+                <p>BIENVENIDOS A MI PAGINA WEB</p>
+            </div>
+            <a href="#sobre-mi" class="scroll-down">↓</a>
+        </section>
+
+        <section id="carrusel">
+         <div class="carrusel-container">
+             <div class="carrusel-slide active">
+                 <img src="IMG/_SAM1420.JPG" alt="Imagen 1">
+             </div>
+             <div class="carrusel-slide">
+                 <img src="IMG/biblio.jpg.jpg" alt="Imagen 2">
+             </div>
+             <div class="carrusel-slide">
+                 <img src="IMG/_SAM1398.JPG" alt="Imagen 3">
+             </div>
+             <div class="carrusel-slide">
+               <img src="IMG/_SAM1298.JPG" alt="Imagen 4">
+           </div>
+         </div>
+         <button class="carrusel-button prev">&#10094;</button>
+         <button class="carrusel-button next">&#10095;</button>
+     </section>
+     
+        
+        <section id="sobre-mi">
+         <div class="So-mi">
+            <h2>FUTURO <br>PROGRAMADOR | FOTOGRAFO</h2>
+            <h1>MI NOMBRE ES AXEL SANCHEZ,<br>ESTUDIO PROGRAMACION <br>Y EN MIS TIEMPOS LIBRES
+            FOTOGRAFIA</h1>
+         </div>
+         <p>
+            SanchezSv es un reflejo de mi ilusion por unir los dos mundos que me apacionan tanto como lo es
+            la fotografia la programacion.
+         </p>
+         <div class="logox">
+            <span class="logo"><span class="brackets">{</span>SanchezSv<span class="brackets">}</span></span>
+
+         </div>
+        </section>
+        <section id="Portafolio">
+         <div class="Portafolio-c">
+            <h2> PORTAFOLIO</h2>
+            <div class="project-types">
+               <div class="project-type">
+                  <h3>01</h3>
+                  <p>FOTOGRAFIA</p>
+
+               </div>
+               <div class="project-type">
+                  <h3>02</h3>
+                  <p>PROGRAMACIÓN</p>
+              </div>
+
+            </div>
+        <div class="cta-section">
+         <i class="fa-solid fa-camera"></i>
+
+         <i class="fas fa-code"></i>
+         <div class="cta-buttons">
+           <h4>¿QUIERES VER MIS PROYECTOS?</h4>
+           <div class="cta-buttons">
+            <a href="#" class="cta-button">VER FOTOGRAFÍAS</a>
+            <a href="#" class="cta-button">VER PROYECTOS DE PROGRAMACIÓN</a>
+        </div>
+         </div>
+
+        </div>
+       
+         </div>
+      </section>
+
+        <section id="Blog">
+         <div class="blogproyecto">
+            <div class="imagen-container">
+               <img src="IMG/web.JPG" alt="axel">
+               <div class="overlay">
+                  <h3>Blog</h3>
+                  <p>¡Bienvenido a mi blog! <br> Este es el primer paso de un proyecto que he estado pensado hace mucho tiempo.Aqui
+                     quiero compartirles mis experiencias. <br>Es una ventana abierta abierta a lo que me apaciona y me inspira. <br> Mi intención es 
+                     crear un lugar donde podamos aprender, convivir, crecer y sobre todo conectar. <br> Espero que disfrures de este viaje tanto como yo.
+                  </p>
+
+               </div>
+                 <a href="#Contacto" class="scroll-down">↓</a>
+
+            </div>
+
+         </div>
+        </section>
+        
+        <section id="Contacto">
+         <div class="social-links">
+            <a href="https://www.instagram.com/t_sanchez_sv?igsh=N2J4N2Y0cDI2Mjlo&utm_source=qr" target="_blank" aria-label="Instagram">
+               <i class="fab fa-instagram"></i>
+             </a>
+             <a href="https://www.youtube.com/@SanchezSV" target="_blank" aria-label="YouTube">
+               <i class="fab fa-youtube"></i>
+             </a>
+         </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 SanchezSv. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+      const carrusel = document.querySelector('.carrusel-container');
+      const slides = document.querySelectorAll('.carrusel-slide');
+      const prevButton = document.querySelector('.prev');
+      const nextButton = document.querySelector('.next');
+      let currentIndex = 0;
+  
+      function showSlide(index) {
+          if (index < 0) index = slides.length - 1;
+          if (index >= slides.length) index = 0;
+          carrusel.style.transform = `translateX(-${index * 100}%)`;
+          currentIndex = index;
+      }
+  
+      prevButton.addEventListener('click', () => showSlide(currentIndex - 1));
+      nextButton.addEventListener('click', () => showSlide(currentIndex + 1));
+  
+      // Cambio automático cada 5 segundos
+      setInterval(() => showSlide(currentIndex + 1), 5000);
+
+      
+  </script>
+   <!-- Otros elementos del head -->
+   <script>
+   document.addEventListener('DOMContentLoaded', function() {
+     const menuToggle = document.querySelector('.menu-toggle');
+     const navLinks = document.querySelector('.nav-links');
+ 
+     menuToggle.addEventListener('click', () => {
+       navLinks.classList.toggle('active');
+     });
+   });
+   </script>
+ 
+  
+</body>
+</html>
